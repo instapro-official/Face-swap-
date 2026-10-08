@@ -1,152 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FaceSwapPorn.vip - 100% FREE & UNLIMITED</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-    }
-    
-    .neon-pink {
-      color: #ff2d95;
-      text-shadow: 0 0 10px #ff2d95, 0 0 20px #ff2d95, 0 0 40px #ff2d95;
-    }
-    
-    .neon-purple {
-      color: #c026ff;
-      text-shadow: 0 0 10px #c026ff, 0 0 20px #c026ff;
-    }
-    
-    .glow-box {
-      background: linear-gradient(145deg, rgba(255,45,149,0.1), rgba(192,38,255,0.1));
-      border: 1px solid rgba(255,45,149,0.3);
-      box-shadow: 0 0 30px rgba(255,45,149,0.15);
-    }
-    
-    .feature-item {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,45,149,0.2);
-      transition: all 0.3s ease;
-    }
-    
-    .feature-item:hover {
-      background: rgba(255,45,149,0.15);
-      border-color: #ff2d95;
-      transform: translateY(-2px);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaceSwapPorn.vip – 100% Free Unlimited</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #0a0a0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 20px;
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 700px;
+    background: linear-gradient(160deg, #0d0d14 0%, #1a0a1f 40%, #120818 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 
+      0 0 0 1px rgba(255, 0, 128, 0.25),
+      0 0 60px rgba(255, 0, 150, 0.15),
+      0 25px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  /* Neon glow effects */
+  .poster::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 30% 20%, rgba(255, 0, 150, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(180, 0, 255, 0.1) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .header {
+    text-align: center;
+    padding: 40px 30px 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ff2d95, #c026ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    font-size: 13px;
+    color: #a78bfa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .headline {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255, 0, 150, 0.4);
+  }
+
+  .headline span {
+    display: block;
+    background: linear-gradient(90deg, #ff2d95, #e879f9, #c026ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+  }
+
+  .features {
+    padding: 10px 35px 25px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .features h3 {
+    font-size: 15px;
+    color: #e879f9;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3e8ff;
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+
+  .feature-item::before {
+    content: '✓';
+    color: #ff2d95;
+    font-weight: 800;
+    font-size: 16px;
+    text-shadow: 0 0 10px rgba(255, 45, 149, 0.6);
+  }
+
+  .prompts-section {
+    background: rgba(255, 0, 128, 0.06);
+    border-top: 1px solid rgba(255, 0, 150, 0.15);
+    border-bottom: 1px solid rgba(255, 0, 150, 0.15);
+    padding: 22px 35px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .prompts-section h3 {
+    font-size: 14px;
+    color: #f472b6;
+    margin-bottom: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .prompt {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 45, 149, 0.25);
+    color: #fce7f3;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  .bottom {
+    text-align: center;
+    padding: 28px 30px 36px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bottom-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .bottom-text span {
+    color: #ff2d95;
+  }
+
+  .cta {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff2d95, #c026ff);
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 16px 42px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(255, 45, 149, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 45, 149, 0.55);
+  }
+
+  .domain {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #c084fc;
+    font-weight: 600;
+  }
+</style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
-  <div class="max-w-4xl w-full">
-    
-    <!-- Main Poster Card -->
-    <div class="glow-box rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-      
-      <!-- Background Glow Effects -->
-      <div class="absolute top-0 left-0 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-      <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
-      
-      <!-- Content -->
-      <div class="relative z-10">
-        
-        <!-- Logo / Brand -->
-        <div class="mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold text-white">
-            FaceSwapPorn<span class="neon-pink">.vip</span>
-          </h2>
-          <p class="text-gray-400 text-sm mt-1">Deepswaper</p>
-        </div>
-        
-        <!-- Main Headline -->
-        <h1 class="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
-          <span class="neon-pink">100% FREE</span> & 
-          <span class="neon-purple">UNLIMITED</span>
-        </h1>
-        <p class="text-xl md:text-2xl font-bold text-white mb-8">
-          All AI Features Completely Free Forever
-        </p>
-        
-        <!-- Features Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8 text-left">
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Face Swap (Photo + Video)
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Undress AI
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Clothes Changer
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ NSFW AI Video
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ AI Studio (Seedance)
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Image to Video
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Text to Image
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Image to Image
-          </div>
-          <div class="feature-item rounded-xl p-3 text-sm text-white font-medium">
-            ✓ Cum Face Generator
-          </div>
-        </div>
-        
-        <!-- Popular Prompts -->
-        <div class="mb-8">
-          <p class="text-pink-400 font-semibold mb-3 text-sm uppercase tracking-wider">Popular Free Prompts</p>
-          <div class="flex flex-wrap justify-center gap-2">
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">nude</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">take off her clothes</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">completely nude</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">remove all clothes</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">sexy maid outfit</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">red lace lingerie</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">black bikini</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">fishnets</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">wet white shirt</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">micro bikini</span>
-            <span class="bg-pink-600/20 text-pink-300 text-xs px-3 py-1.5 rounded-full border border-pink-500/30">lingerie</span>
-          </div>
-        </div>
-        
-        <!-- Bottom Strong Text -->
-        <div class="border-t border-pink-500/20 pt-6">
-          <p class="text-lg md:text-xl font-bold text-white">
-            No Sign Up • No Watermark • No Limits • No Payment Required
-          </p>
-          <p class="text-pink-400 font-semibold mt-2 text-lg">
-            Everything is Free & Unlimited
-          </p>
-        </div>
-        
-        <!-- CTA Button -->
-        <div class="mt-8">
-          <a href="https://faceswapporn.vip" target="_blank" 
-             class="inline-block bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-lg px-10 py-4 rounded-full transition-all duration-300 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50">
-            Try Now – It's Free
-          </a>
-        </div>
-        
+<body>
+  <div class="poster">
+    <div class="header">
+      <div class="logo">FaceSwapPorn.vip</div>
+      <div class="tagline">Deepswaper • Premium AI Adult Studio</div>
+      <h1 class="headline">
+        100% FREE & UNLIMITED
+        <span>All AI Features Completely Free Forever</span>
+      </h1>
+    </div>
+
+    <div class="features">
+      <h3>Everything Free & Unlimited</h3>
+      <div class="feature-grid">
+        <div class="feature-item">Face Swap (Photo + Video)</div>
+        <div class="feature-item">Undress AI</div>
+        <div class="feature-item">Clothes Changer</div>
+        <div class="feature-item">NSFW AI Video</div>
+        <div class="feature-item">AI Studio (Seedance)</div>
+        <div class="feature-item">Image to Video</div>
+        <div class="feature-item">Text to Image</div>
+        <div class="feature-item">Image to Image</div>
+        <div class="feature-item">Cum Face Generator</div>
+        <div class="feature-item">All Tools Unlimited</div>
       </div>
     </div>
-    
-    <!-- Footer note -->
-    <p class="text-center text-gray-600 text-xs mt-6">
-      FaceSwapPorn.vip • Deepswaper
-    </p>
-    
+
+    <div class="prompts-section">
+      <h3>Popular Free Prompts</h3>
+      <div class="prompts">
+        <span class="prompt">nude</span>
+        <span class="prompt">take off her clothes</span>
+        <span class="prompt">completely nude</span>
+        <span class="prompt">remove all clothes</span>
+        <span class="prompt">naked</span>
+        <span class="prompt">sexy maid outfit</span>
+        <span class="prompt">red lace lingerie</span>
+        <span class="prompt">black bikini</span>
+        <span class="prompt">fishnets</span>
+        <span class="prompt">wet white shirt</span>
+        <span class="prompt">micro bikini</span>
+        <span class="prompt">lingerie</span>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="bottom-text">
+        <span>No Sign Up</span> • <span>No Watermark</span> • <span>No Limits</span><br>
+        <span>No Payment Required</span> – Everything is Free & Unlimited
+      </div>
+      <a href="https://FaceSwapPorn.vip" class="cta">START FREE NOW →</a>
+      <div class="domain">FaceSwapPorn.vip</div>
+    </div>
   </div>
 </body>
 </html>
